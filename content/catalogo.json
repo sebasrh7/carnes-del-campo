@@ -1,0 +1,75 @@
+{
+  "categorias": [
+    {
+      "id": "res",
+      "titulo": "Cortes de res",
+      "imagen": "https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=900&q=80",
+      "cortes": [
+        { "nombre": "Lomo fino", "foto": "assets/cortes/lomo-fino.jpg", "precio": "" },
+        { "nombre": "Lomo ancho", "foto": "assets/cortes/lomo-ancho.jpg", "precio": "" },
+        { "nombre": "Punta de anca", "foto": "assets/cortes/punta-de-anca.jpg", "precio": "" },
+        { "nombre": "Sobrebarriga", "foto": "assets/cortes/sobrebarriga.jpg", "precio": "" },
+        { "nombre": "Carne molida", "foto": "assets/cortes/carne-molida.jpg", "precio": "" },
+        { "nombre": "Costilla de res", "foto": "assets/cortes/costilla-de-res.jpg", "precio": "" },
+        { "nombre": "Cadera", "foto": "assets/cortes/cadera.jpg", "precio": "" },
+        { "nombre": "Bota", "foto": "assets/cortes/bota.jpg", "precio": "" },
+        { "nombre": "Murillo", "foto": "assets/cortes/murillo.jpg", "precio": "" },
+        { "nombre": "Centro de pierna", "foto": "assets/cortes/centro-de-pierna.jpg", "precio": "" },
+        { "nombre": "Lengua", "foto": "assets/cortes/lengua.jpg", "precio": "" },
+        { "nombre": "Hígado", "foto": "assets/cortes/higado.jpg", "precio": "" }
+      ]
+    },
+    {
+      "id": "cerdo",
+      "titulo": "Cortes de cerdo",
+      "imagen": "https://images.unsplash.com/photo-1615937691194-97dbd3f3dc29?w=900&q=80",
+      "cortes": [
+        { "nombre": "Costilla de cerdo", "foto": "assets/cortes/costilla-de-cerdo.jpg", "precio": "" },
+        { "nombre": "Pernil", "foto": "assets/cortes/pernil.jpg", "precio": "" },
+        { "nombre": "Chuleta", "foto": "assets/cortes/chuleta.jpg", "precio": "" },
+        { "nombre": "Lomo de cerdo", "foto": "assets/cortes/lomo-de-cerdo.jpg", "precio": "" },
+        { "nombre": "Tocino / panceta", "foto": "assets/cortes/tocino-panceta.jpg", "precio": "" },
+        { "nombre": "Brazo", "foto": "assets/cortes/brazo.jpg", "precio": "" },
+        { "nombre": "Empella", "foto": "assets/cortes/empella.jpg", "precio": "" },
+        { "nombre": "Patas", "foto": "assets/cortes/patas.jpg", "precio": "" }
+      ]
+    },
+    {
+      "id": "pollo",
+      "titulo": "Pollo",
+      "imagen": "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=900&q=80",
+      "cortes": [
+        { "nombre": "Pollo entero", "foto": "assets/cortes/pollo-entero.jpg", "precio": "" },
+        { "nombre": "Pechuga", "foto": "assets/cortes/pechuga.jpg", "precio": "" },
+        { "nombre": "Muslos", "foto": "assets/cortes/muslos.jpg", "precio": "" },
+        { "nombre": "Contramuslos", "foto": "assets/cortes/contramuslos.jpg", "precio": "" },
+        { "nombre": "Alas", "foto": "assets/cortes/alas.jpg", "precio": "" },
+        { "nombre": "Menudencias", "foto": "assets/cortes/menudencias.jpg", "precio": "" }
+      ]
+    },
+    {
+      "id": "embutidos",
+      "titulo": "Embutidos",
+      "imagen": "https://images.unsplash.com/photo-1544025162-d76694265947?w=900&q=80",
+      "cortes": [
+        { "nombre": "Chorizo", "foto": "assets/cortes/chorizo.jpg", "precio": "" },
+        { "nombre": "Longaniza", "foto": "assets/cortes/longaniza.jpg", "precio": "" },
+        { "nombre": "Morcilla (rellena)", "foto": "assets/cortes/morcilla-rellena.jpg", "precio": "" },
+        { "nombre": "Butifarra", "foto": "assets/cortes/butifarra.jpg", "precio": "" }
+      ]
+    },
+    {
+      "id": "especiales",
+      "titulo": "Cortes especiales",
+      "imagen": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=900&q=80",
+      "cortes": [
+        { "nombre": "Churrasco", "foto": "assets/cortes/churrasco.jpg", "precio": "" },
+        { "nombre": "Baby beef", "foto": "assets/cortes/baby-beef.jpg", "precio": "" },
+        { "nombre": "Picaña", "foto": "assets/cortes/picana.jpg", "precio": "" },
+        { "nombre": "T-bone", "foto": "assets/cortes/t-bone.jpg", "precio": "" },
+        { "nombre": "Picada para asado", "foto": "assets/cortes/picada-para-asado.jpg", "precio": "" },
+        { "nombre": "Cortes por encargo", "foto": "assets/cortes/cortes-por-encargo.jpg", "precio": "" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+# Configuración del panel de administración (Pages CMS — app.pagescms.org)
+# Define qué puede editar el dueño del negocio sin tocar código.
+
+media:
+  input: assets/cortes
+  output: assets/cortes
+
+content:
+  - name: catalogo
+    label: Catálogo de cortes
+    type: file
+    path: content/catalogo.json
+    format: json
+    fields:
+      - name: categorias
+        label: Categorías
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: Identificador (no cambiar — conecta con la tarjeta de la página)
+            type: string
+          - name: titulo
+            label: Título de la categoría
+            type: string
+          - name: imagen
+            label: Foto de cabecera de la categoría (URL o imagen subida)
+            type: string
+          - name: cortes
+            label: Cortes
+            type: object
+            list: true
+            fields:
+              - name: nombre
+                label: Nombre del corte
+                type: string
+              - name: foto
+                label: Foto del corte
+                type: image
+              - name: precio
+                label: "Precio (opcional, ej: $14.000 /lb)"
+                type: string
+                required: false

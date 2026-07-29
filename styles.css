@@ -1,0 +1,338 @@
+/* =========================================================
+   Carnes del Campo — Estilos
+   Paleta: blanco protagonista · negro y rojo del logo
+   Diseño móvil primero · Animaciones GSAP
+   ========================================================= */
+
+:root {
+  /* ---- Paleta: blanco protagonista · negro y rojo del logo · crema mínimo ---- */
+  --paper:      #FFFFFF;   /* fondo principal (blanco) */
+  --alt:        #F5F3F0;   /* fondo alterno, neutro muy tenue (NO crema) */
+  --surface:    #FFFFFF;   /* tarjetas */
+  --cream:      #F8EBDD;   /* crema del logo — reservado, uso mínimo */
+  --ink:        #242422;   /* negro del logo */
+  --ink-soft:   #574F48;   /* negro suavizado para textos secundarios */
+  --accent:     #922222;   /* rojo carne del logo */
+  --accent-dk:  #781B1B;   /* rojo más oscuro (hover) */
+  --accent-soft:#B23A3A;   /* rojo más claro */
+  --dark:       #242422;   /* sección oscura (negro del logo) */
+  --line:       #ECE8E4;   /* línea neutra tenue */
+  --wa:         #25D366;   /* verde WhatsApp (color oficial de la marca WhatsApp) */
+  --wa-dk:      #1da851;
+
+  --maxw: 1120px;
+  --radius: 10px;
+  --shadow: 0 6px 24px rgba(36, 30, 28, 0.10);
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+}
+
+/* ---- Reset ligero ---- */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 74px; }
+
+/* Sin scroll horizontal en toda la página (clip no rompe el header pegajoso) */
+html, body { overflow-x: clip; }
+@supports not (overflow: clip) {
+  html, body { overflow-x: hidden; }
+}
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--accent); }
+h1, h2, h3 { font-family: var(--serif); line-height: 1.12; letter-spacing: -0.01em; text-wrap: balance; }
+
+.container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 1.15rem; }
+
+/* ---- Botones ---- */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem; justify-content: center;
+  font-weight: 700; font-size: 1rem; text-decoration: none;
+  padding: 0.85rem 1.4rem; border-radius: 999px; border: 2px solid transparent;
+  cursor: pointer; transition: transform .12s ease, background .18s ease, color .18s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-dk); }
+.btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.7); }
+.btn-ghost:hover { background: rgba(255,255,255,.14); }
+.btn-block { display: flex; width: 100%; }
+.btn .ico { width: 20px; height: 20px; fill: currentColor; }
+
+/* ---- Header / Nav ---- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--paper); /* blanco; el logo transparente se funde sin recuadro */
+  border-bottom: 1px solid var(--line);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+.brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--ink); }
+.brand-logo {
+  height: 50px; width: auto; display: block;
+}
+
+.nav { display: flex; align-items: center; gap: 1.4rem; }
+.nav a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.96rem; }
+.nav a:hover { color: var(--accent); }
+.nav .nav-cta { background: var(--accent); color: #fff; padding: 0.5rem 1rem; border-radius: 999px; }
+.nav .nav-cta:hover { background: var(--accent-dk); color: #fff; }
+
+.nav-toggle {
+  display: none; flex-direction: column; gap: 5px; background: none; border: none;
+  cursor: pointer; padding: 8px;
+}
+.nav-toggle span { width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: .2s; }
+
+/* ---- Hero ---- */
+.hero { position: relative; min-height: 82vh; display: flex; align-items: center; overflow: hidden; }
+.hero-media {
+  position: absolute; inset: 0;
+  background: #2a1518 url('https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=1600&q=80') center/cover no-repeat;
+  /* el transform lo controla GSAP (parallax) */
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(105deg, rgba(30,14,16,.86) 0%, rgba(30,14,16,.55) 55%, rgba(30,14,16,.25) 100%);
+}
+.hero-content { position: relative; color: #fff; padding: 4rem 1.15rem; }
+.hero .eyebrow {
+  font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: #E7B3B3; font-weight: 700; margin: 0 0 1rem;
+}
+.hero h1 { font-size: clamp(2.6rem, 9vw, 5rem); margin: 0 0 1.1rem; color: #fff; }
+.hero-lead { font-size: clamp(1.05rem, 2.6vw, 1.3rem); max-width: 40ch; margin: 0 0 2rem; color: #f3ece8; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+
+/* ---- Secciones ---- */
+.section { padding: clamp(3.2rem, 8vw, 6rem) 0; }
+.section-alt { background: var(--alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-head { max-width: 42rem; margin: 0 auto 2.6rem; text-align: center; }
+.kicker {
+  font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase;
+  font-weight: 700; color: var(--accent); margin: 0 0 0.5rem;
+}
+.kicker.light { color: #E7B3B3; }
+.section-head h2 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); margin: 0 0 0.6rem; }
+.section-sub { color: var(--ink-soft); margin: 0; font-size: 1.05rem; }
+
+/* ---- Dos columnas (Nosotros / Restaurantes) ---- */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 5vw, 4rem); align-items: center; }
+.col-media img { width: 100%; height: 100%; max-height: 460px; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+.col-text h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin: 0.3rem 0 1rem; }
+.col-text p { color: var(--ink-soft); margin: 0 0 1rem; font-size: 1.05rem; }
+.col-text strong { color: var(--ink); }
+
+/* ---- Tarjetas de productos ---- */
+.grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.3rem; }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; transition: transform .16s ease, box-shadow .16s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.card-img { aspect-ratio: 4 / 3; overflow: hidden; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; }
+.card-body { padding: 1.1rem 1.2rem 1.4rem; }
+.card-body h3 { font-size: 1.25rem; margin: 0 0 0.35rem; color: var(--accent); }
+.card-body p { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
+.center-note { text-align: center; margin: 2.4rem 0 0; color: var(--ink-soft); }
+
+/* ---- Diferenciadores ---- */
+.grid-feats { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.3rem; }
+.feat {
+  background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--accent);
+  border-radius: var(--radius); padding: 1.6rem 1.4rem;
+}
+.feat-ico { color: var(--accent); line-height: 0; margin-bottom: 0.9rem; }
+.feat-ico svg { width: 40px; height: 40px; }
+.feat h3 { font-size: 1.2rem; margin: 0 0 0.5rem; }
+.feat p { margin: 0; color: var(--ink-soft); font-size: 0.97rem; }
+
+/* ---- Restaurantes (fondo oscuro) ---- */
+.restaurantes { background: var(--dark); color: #fff; border: none; }
+.restaurantes .col-text h2 { color: #fff; }
+.restaurantes .col-text p { color: #EFE6D9; }
+.check-list { list-style: none; padding: 0; margin: 0 0 1.8rem; display: grid; gap: 0.55rem; }
+.check-list li { position: relative; padding-left: 1.9rem; color: #EFE6D9; }
+.check-list li::before {
+  content: "✓"; position: absolute; left: 0; top: 0;
+  width: 1.35rem; height: 1.35rem; background: rgba(255,255,255,.16); color: #fff;
+  border-radius: 50%; display: grid; place-items: center; font-size: 0.8rem; font-weight: 700;
+}
+
+/* ---- Contacto ---- */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2rem; align-items: stretch; }
+.contact-info { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.8rem; }
+.contact-list { list-style: none; padding: 0; margin: 0 0 1.5rem; display: grid; gap: 1.2rem; }
+.contact-list li { display: grid; grid-template-columns: 1.7rem 1fr; gap: 0.8rem; align-items: start; }
+.contact-list .c-ico { color: var(--accent); line-height: 0; padding-top: 2px; }
+.contact-list .c-ico svg { width: 22px; height: 22px; }
+.contact-list strong { color: var(--ink); }
+.contact-list a { color: var(--accent); text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; }
+.contact-list em { color: var(--ink-soft); font-size: 0.85rem; }
+.socials { display: flex; gap: 1rem; margin-bottom: 1.4rem; }
+.socials a { color: var(--accent); font-weight: 700; text-decoration: none; }
+.socials a:hover { text-decoration: underline; }
+.contact-map { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); min-height: 340px; }
+.contact-map iframe { width: 100%; height: 100%; min-height: 340px; border: 0; display: block; }
+
+/* ---- Footer ---- */
+.site-footer { background: var(--ink); color: #e9e3de; padding: 2.4rem 0; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footer-brand { display: flex; align-items: center; gap: 0.9rem; }
+.footer-logo-chip {
+  flex: none; width: 58px; height: 58px; border-radius: 12px;
+  background: var(--paper); display: grid; place-items: center; overflow: hidden;
+}
+.footer-logo-chip img { width: 100%; height: 100%; object-fit: contain; }
+.footer-brand strong { font-family: var(--serif); font-size: 1.1rem; }
+.footer-brand p { margin: 0.1rem 0 0; color: #b7aea8; font-size: 0.85rem; }
+.footer-legal { margin: 0; color: #b7aea8; font-size: 0.85rem; }
+
+/* ---- Botón flotante WhatsApp ---- */
+.wa-float {
+  position: fixed; right: 18px; bottom: 18px; z-index: 60;
+  width: 58px; height: 58px; border-radius: 50%; background: var(--wa);
+  display: grid; place-items: center; box-shadow: 0 6px 18px rgba(0,0,0,.28);
+  transition: transform .15s ease, background .2s ease;
+}
+.wa-float:hover { background: var(--wa-dk); transform: scale(1.06); }
+.wa-float svg { width: 32px; height: 32px; fill: #fff; }
+
+/* ---- Tarjetas clicables + modal de cortes ---- */
+.card-click { cursor: pointer; }
+.card-more {
+  display: inline-block; margin-top: 0.7rem;
+  color: var(--accent); font-weight: 700; font-size: 0.92rem;
+}
+.card-click:hover .card-more { text-decoration: underline; }
+
+.modal { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 1rem; }
+.modal[hidden] { display: none; }
+.modal-backdrop { position: absolute; inset: 0; background: rgba(36, 36, 34, 0.62); }
+.modal-panel {
+  position: relative; width: 100%; max-width: 30rem; max-height: 86vh; overflow-y: auto;
+  background: var(--surface); border-radius: 14px; padding: 1.8rem 1.7rem 1.6rem;
+  box-shadow: 0 24px 64px rgba(0,0,0,.30);
+}
+.modal-close {
+  position: absolute; top: 0.7rem; right: 0.8rem;
+  width: 2.3rem; height: 2.3rem; border: none; border-radius: 50%;
+  background: var(--alt); color: var(--ink); font-size: 1.5rem; line-height: 1;
+  cursor: pointer;
+}
+.modal-close:hover { background: var(--line); }
+.modal-hero {
+  margin: -1.8rem -1.7rem 1.2rem; height: 150px; overflow: hidden;
+  border-radius: 14px 14px 0 0;
+}
+.modal-hero img { width: 100%; height: 100%; object-fit: cover; }
+.modal-title { font-size: 1.6rem; margin: 0 0 1rem; }
+
+.cuts-list {
+  list-style: none; padding: 0; margin: 0 0 1.2rem;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem;
+}
+.cut { display: grid; gap: 0.4rem; }
+.cut-img {
+  position: relative; aspect-ratio: 1 / 1; border-radius: 8px; overflow: hidden;
+  background: linear-gradient(135deg, var(--alt) 0%, var(--line) 100%);
+  border: 1px solid var(--line);
+}
+.cut-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cut-fallback {
+  position: absolute; inset: 0; display: none; place-items: center;
+  font-family: var(--serif); font-weight: 700; font-size: 2rem; color: var(--accent);
+}
+/* Sin foto: se oculta el img roto y aparece la inicial */
+.cut.no-img img { display: none; }
+.cut.no-img .cut-fallback { display: grid; }
+.cut-name { font-size: 0.88rem; font-weight: 600; color: var(--ink); line-height: 1.25; }
+.cut-price { font-size: 0.84rem; font-weight: 700; color: var(--accent); }
+
+.modal-note { color: var(--ink-soft); font-size: 0.92rem; margin: 0 0 1.2rem; }
+@media (max-width: 480px) {
+  .cuts-list { grid-template-columns: repeat(2, 1fr); }
+  .modal-panel { padding: 1.5rem 1.2rem 1.3rem; }
+  .modal-hero { margin: -1.5rem -1.2rem 1rem; height: 120px; }
+}
+
+/* ---- Foco visible (accesibilidad) ---- */
+a:focus-visible, button:focus-visible, .btn:focus-visible {
+  outline: 3px solid var(--ink); outline-offset: 2px; border-radius: 6px;
+}
+
+/* =========================================================
+   ANIMACIONES  (GSAP: parallax del hero + apariciones al scroll)
+   ========================================================= */
+
+/* Estado inicial oculto — GSAP los revela.
+   La clase .has-anim la pone un script en el <head> solo si hay JS y
+   sin "reducir movimiento". Si algo falla, el JS la quita y todo se ve. */
+html.has-anim .hero-content > * { opacity: 0; transform: translateY(22px); }
+html.has-anim :is(.section-head, .card, .feat, .col-media, .col-text,
+                  .center-note, .contact-info, .contact-map) {
+  opacity: 0; transform: translateY(30px); will-change: opacity, transform;
+}
+
+/* Zoom de la foto del producto al pasar el mouse */
+.card-img img { transition: transform .5s ease; }
+.card:hover .card-img img { transform: scale(1.06); }
+
+/* Subrayado animado en el menú */
+.nav a:not(.nav-cta) { position: relative; }
+.nav a:not(.nav-cta)::after {
+  content: ""; position: absolute; left: 0; bottom: -3px;
+  width: 0; height: 2px; background: var(--accent); transition: width .25s ease;
+}
+.nav a:not(.nav-cta):hover::after { width: 100%; }
+
+/* Sombra del encabezado al hacer scroll */
+.site-header { transition: box-shadow .3s ease; }
+.site-header.scrolled { box-shadow: 0 4px 18px rgba(36, 30, 28, 0.09); }
+
+/* Pulso sutil del botón flotante de WhatsApp */
+.wa-float { animation: waPulse 2.8s ease-out infinite; }
+@keyframes waPulse {
+  0%   { box-shadow: 0 6px 18px rgba(0,0,0,.28), 0 0 0 0 rgba(37,211,102,.5); }
+  70%  { box-shadow: 0 6px 18px rgba(0,0,0,.28), 0 0 0 16px rgba(37,211,102,0); }
+  100% { box-shadow: 0 6px 18px rgba(0,0,0,.28), 0 0 0 0 rgba(37,211,102,0); }
+}
+
+/* =========================================================
+   RESPONSIVE — móvil
+   ========================================================= */
+@media (max-width: 860px) {
+  .two-col, .two-col.reverse { grid-template-columns: 1fr; }
+  .two-col.reverse .col-media { order: -1; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .col-media img { max-height: 320px; }
+}
+
+@media (max-width: 680px) {
+  .nav-toggle { display: flex; }
+  .nav {
+    position: absolute; top: 66px; left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--paper); border-bottom: 1px solid var(--line);
+    max-height: 0; overflow: hidden; transition: max-height .28s ease;
+  }
+  .nav.open { max-height: 380px; }
+  .nav a { padding: 0.95rem 1.3rem; border-top: 1px solid var(--line); }
+  .nav .nav-cta { border-radius: 0; text-align: center; }
+  .hero { min-height: 78vh; }
+  .brand-logo { height: 42px; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---- Respeta reduce-motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
