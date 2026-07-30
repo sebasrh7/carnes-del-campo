@@ -16,8 +16,6 @@ Sitio web de una página para **Carnes del Campo** (carnicería y distribuidor d
 | `index.html`                  | Contenido, estructura, SEO y datos para Google  |
 | `styles.css`                  | Diseño (colores del logo, tipografía, responsive)|
 | `script.js`                   | Menú móvil, animaciones GSAP y parallax         |
-| `assets/logo.png`             | Logo original (1254px, con fondo crema)         |
-| `assets/logo-transparent.png` | Logo original con fondo transparente            |
 | `assets/logo-small.png`       | Logo optimizado que usa la página (52 KB)       |
 | `assets/favicon.png`          | Ícono de la pestaña (64px)                      |
 | `assets/og-image.jpg`         | Imagen de vista previa al compartir el enlace   |
