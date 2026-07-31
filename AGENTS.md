@@ -30,7 +30,11 @@ estático de marketing pensado para convertir visitas en pedidos por WhatsApp.
 ### Cómo funciona el catálogo
 
 1. `script.js` hace `fetch('content/catalogo.json')` e indexa las categorías por
-   `id` (`res`, `cerdo`, `pollo`, `embutidos`, `especiales`).
+   `id`. Actualmente solo están activas `cerdo` y `pollo` (espejo 1:1 del
+   catálogo activo en Alegra POS, con precios por libra); `res`, `embutidos`
+   y `especiales` están pausadas: sus tarjetas quedaron comentadas en
+   `index.html` (bloque «CATEGORÍAS PAUSADAS») y sus fotos siguen en
+   `assets/cortes/` listas para reactivarlas.
 2. Las tarjetas de productos en `index.html` llevan `data-cat="res"` etc.; al
    hacer clic abren el modal `#cutsModal` con los cortes de esa categoría.
    La tarjeta `data-cat="mayor"` es un caso especial: hace scroll a la sección
