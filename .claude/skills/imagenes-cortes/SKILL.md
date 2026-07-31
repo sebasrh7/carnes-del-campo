@@ -39,7 +39,7 @@ Reglas:
 | Papada | a slab of raw pork jowl, pale fat with thin streaks of meat |
 | Espinazo de cerdo | raw pork backbone pieces with bone and meat |
 | Tocino | a thick slab of raw pork belly with skin |
-| Garra | raw pork skin and fat pieces for frying chicharrón — OJO: si el dueño confirma que su «garra» son patas, usar: four raw pork trotters (pig feet), clean and pale |
+| Garra | four raw pork trotters (pig feet), clean and pale — CONFIRMADO (31 jul 2026): en esta carnicería «garra» son patas; el dueño generó y aprobó la imagen de patas |
 | Pechuga de pollo | two whole raw skinless chicken breasts |
 | Pernil de pollo | raw chicken leg quarters with skin |
 | Alas de pollo | a pile of fresh raw chicken wings |
