@@ -101,6 +101,22 @@ tarjeta en `index.html` (hoy apunta a Unsplash) y el campo `imagen` de la
 categoría en `content/catalogo.json` (encabezado del modal). Las categorías
 de Alegra no tienen imagen; esto es solo web.
 
+## Imágenes de SITIO (hero, secciones, og-image)
+
+| Imagen | Formato | Dónde va | [Prompt] |
+|---|---|---|---|
+| Hero (portada) | 16:9 panorámica | `styles.css` `.hero-media` + `<link rel="preload">` en `index.html` | a generous spread of assorted raw meat cuts — beef steaks, pork cuts and chicken — across a clean white marble counter, wide panoramic composition with space at the center (el texto va encima) |
+| Nosotros | 4:3 | `index.html` sección `#nosotros` | ⭐ mejor FOTO REAL de la vitrina; IA provisional: a traditional butcher display counter filled with fresh raw meat cuts neatly arranged behind glass, clean bright shop interior |
+| Restaurantes | 4:3 | `index.html` sección `#restaurantes` | stacked delivery crates and trays of assorted fresh raw meat cuts wrapped and ready for restaurant wholesale delivery |
+| og-image | 1200×630 | `assets/og-image.jpg` (vista previa WhatsApp) | NO generar: componerla desde la imagen del hero + logo `assets/logo-small.png` encima, con Pillow |
+| Cortes por encargo | 1:1 | `assets/cortes/cortes-por-encargo.jpg` (al reactivar Especiales) | a butcher's knife beside several custom-cut raw beef steaks of different thicknesses |
+
+Usar la misma base de estilo de siempre (mármol blanco, luz natural, crudo,
+sin gente ni texto). Al publicar el hero: convertir y guardar local (ej.
+`assets/hero.jpg`), actualizar `styles.css` y el preload de `index.html`,
+y quitar el `preconnect` a images.unsplash.com si ya no queda ninguna
+imagen de Unsplash.
+
 ## Qué hacer con las imágenes generadas
 
 1. Pedirle al dueño los archivos, nombrados por corte.
