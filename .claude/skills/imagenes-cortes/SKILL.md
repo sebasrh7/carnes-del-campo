@@ -75,6 +75,32 @@ Reglas:
 | T-bone | a raw T-bone steak showing the bone |
 | Picada para asado | an assortment of raw meats for barbecue on a tray |
 
+## Imágenes de CATEGORÍAS (tarjetas de la web)
+
+Composiciones de varios cortes, formato **horizontal 4:3** (las tarjetas y el
+encabezado del modal son apaisados). Base adaptada:
+
+> Professional butcher shop category photo: [CATEGORÍA], raw and fresh,
+> arranged together on a clean white marble counter, soft natural daylight,
+> plain light background, no props, no garnish, no herbs, no cooked food,
+> no people, no text, realistic meat texture, slight 45-degree angle,
+> landscape 4:3 format
+
+| Categoría | [CATEGORÍA] |
+|---|---|
+| Cerdo | an arrangement of assorted raw pork cuts — a loin, a rack of ribs, a leg and bacon strips |
+| Pollo | an arrangement of assorted raw chicken cuts — breasts, leg quarters and wings |
+| Al por mayor | bulk trays of assorted raw meat cuts stacked and ready for restaurant delivery |
+| Res (pausada) | an arrangement of assorted raw beef cuts — thick steaks, short ribs and a mound of ground beef |
+| Embutidos (pausada) | an arrangement of fresh raw sausages — chorizo links tied with string, a longaniza coil and morcilla |
+| Especiales (pausada) | premium raw beef steaks arranged together — a T-bone, a whole picanha with fat cap and thick medallions |
+
+Dónde van al publicarlas: guardarlas como `assets/categorias/<id>.jpg`
+(crear la carpeta si no existe) y actualizar DOS lugares — el `src` de la
+tarjeta en `index.html` (hoy apunta a Unsplash) y el campo `imagen` de la
+categoría en `content/catalogo.json` (encabezado del modal). Las categorías
+de Alegra no tienen imagen; esto es solo web.
+
 ## Qué hacer con las imágenes generadas
 
 1. Pedirle al dueño los archivos, nombrados por corte.
