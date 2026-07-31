@@ -3,7 +3,7 @@
     {
       "id": "cerdo",
       "titulo": "Cortes de cerdo",
-      "imagen": "https://images.unsplash.com/photo-1615937691194-97dbd3f3dc29?w=900&q=80",
+      "imagen": "assets/categorias/cerdo.jpg",
       "cortes": [
         { "nombre": "Lomo de cerdo", "foto": "assets/cortes/lomo-de-cerdo.jpg", "precio": "$10.000 /lb" },
         { "nombre": "Pernil de cerdo", "foto": "assets/cortes/pernil.jpg", "precio": "$9.000 /lb" },
@@ -19,7 +19,7 @@
     {
       "id": "pollo",
       "titulo": "Pollo",
-      "imagen": "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=900&q=80",
+      "imagen": "assets/categorias/pollo.jpg",
       "cortes": [
         { "nombre": "Pechuga de pollo", "foto": "assets/cortes/pechuga.jpg", "precio": "$10.000 /lb" },
         { "nombre": "Pernil de pollo", "foto": "assets/cortes/pernil-de-pollo.jpg", "precio": "$6.500 /lb" },
