@@ -47,6 +47,12 @@ estático de marketing pensado para convertir visitas en pedidos por WhatsApp.
 
 ## Reglas importantes al modificar
 
+- **Al reemplazar una imagen conservando su nombre de archivo, sube el
+  sufijo de versión** (`foto.jpg?v=2` → `?v=3`) en TODAS sus referencias
+  (`index.html`, `styles.css`, `content/catalogo.json`): los navegadores
+  cachean las imágenes y sin el sufijo los visitantes recurrentes siguen
+  viendo la vieja.
+
 - **No cambiar los `id` de las categorías** en `content/catalogo.json`
   (`res`, `cerdo`, `pollo`, `embutidos`, `especiales`): están acoplados a los
   `data-cat` de las tarjetas en `index.html`. Si agregas una categoría,

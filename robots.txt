@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://carnes-del-campo-azure.vercel.app/sitemap.xml

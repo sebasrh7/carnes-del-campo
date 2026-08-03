@@ -158,6 +158,23 @@ fetch('content/catalogo.json')
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !modal.hidden) closeModal();
   });
+
+  // Mantener el foco dentro del modal mientras esté abierto (accesibilidad):
+  // con Tab en el último elemento se vuelve al primero, y viceversa.
+  modal.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab' || modal.hidden) return;
+    const focusables = modal.querySelectorAll('button, [href]');
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
 })();
 
 // 4) Animaciones con GSAP (parallax del hero + apariciones al scroll)

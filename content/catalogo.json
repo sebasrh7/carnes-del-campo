@@ -3,27 +3,75 @@
     {
       "id": "cerdo",
       "titulo": "Cortes de cerdo",
-      "imagen": "assets/categorias/cerdo.jpg",
+      "imagen": "assets/categorias/cerdo.jpg?v=2",
       "cortes": [
-        { "nombre": "Lomo de cerdo", "foto": "assets/cortes/lomo-de-cerdo.jpg", "precio": "$10.000 /lb" },
-        { "nombre": "Pernil de cerdo", "foto": "assets/cortes/pernil.jpg", "precio": "$9.000 /lb" },
-        { "nombre": "Costilla de cerdo", "foto": "assets/cortes/costilla-de-cerdo.jpg", "precio": "$10.000 /lb" },
-        { "nombre": "Brazo de cerdo", "foto": "assets/cortes/brazo.jpg", "precio": "$7.500 /lb" },
-        { "nombre": "Tocineta", "foto": "assets/cortes/tocineta.jpg", "precio": "$10.500 /lb" },
-        { "nombre": "Papada", "foto": "assets/cortes/papada.jpg", "precio": "$7.500 /lb" },
-        { "nombre": "Espinazo de cerdo", "foto": "assets/cortes/espinazo.jpg", "precio": "$4.000 /lb" },
-        { "nombre": "Tocino", "foto": "assets/cortes/tocino-panceta.jpg", "precio": "$2.500 /lb" },
-        { "nombre": "Garra", "foto": "assets/cortes/garra.jpg", "precio": "$1.500 /lb" }
+        {
+          "nombre": "Lomo de cerdo",
+          "foto": "assets/cortes/lomo-de-cerdo.jpg?v=2",
+          "precio": "$10.000 /lb"
+        },
+        {
+          "nombre": "Pernil de cerdo",
+          "foto": "assets/cortes/pernil.jpg?v=2",
+          "precio": "$9.000 /lb"
+        },
+        {
+          "nombre": "Costilla de cerdo",
+          "foto": "assets/cortes/costilla-de-cerdo.jpg?v=2",
+          "precio": "$10.000 /lb"
+        },
+        {
+          "nombre": "Brazo de cerdo",
+          "foto": "assets/cortes/brazo.jpg?v=2",
+          "precio": "$7.500 /lb"
+        },
+        {
+          "nombre": "Tocineta",
+          "foto": "assets/cortes/tocineta.jpg?v=2",
+          "precio": "$10.500 /lb"
+        },
+        {
+          "nombre": "Papada",
+          "foto": "assets/cortes/papada.jpg?v=2",
+          "precio": "$7.500 /lb"
+        },
+        {
+          "nombre": "Espinazo de cerdo",
+          "foto": "assets/cortes/espinazo.jpg?v=2",
+          "precio": "$4.000 /lb"
+        },
+        {
+          "nombre": "Tocino",
+          "foto": "assets/cortes/tocino-panceta.jpg?v=2",
+          "precio": "$2.500 /lb"
+        },
+        {
+          "nombre": "Garra",
+          "foto": "assets/cortes/garra.jpg?v=2",
+          "precio": "$1.500 /lb"
+        }
       ]
     },
     {
       "id": "pollo",
       "titulo": "Pollo",
-      "imagen": "assets/categorias/pollo.jpg",
+      "imagen": "assets/categorias/pollo.jpg?v=2",
       "cortes": [
-        { "nombre": "Pechuga de pollo", "foto": "assets/cortes/pechuga.jpg", "precio": "$10.000 /lb" },
-        { "nombre": "Pernil de pollo", "foto": "assets/cortes/pernil-de-pollo.jpg", "precio": "$6.500 /lb" },
-        { "nombre": "Alas de pollo", "foto": "assets/cortes/alas.jpg", "precio": "$7.000 /lb" }
+        {
+          "nombre": "Pechuga de pollo",
+          "foto": "assets/cortes/pechuga.jpg?v=2",
+          "precio": "$10.000 /lb"
+        },
+        {
+          "nombre": "Pernil de pollo",
+          "foto": "assets/cortes/pernil-de-pollo.jpg?v=2",
+          "precio": "$6.500 /lb"
+        },
+        {
+          "nombre": "Alas de pollo",
+          "foto": "assets/cortes/alas.jpg?v=2",
+          "precio": "$7.000 /lb"
+        }
       ]
     }
   ]
